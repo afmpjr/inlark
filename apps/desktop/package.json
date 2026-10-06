@@ -15,7 +15,7 @@
     "dev:web": "vite --config vite.web.config.ts --host 127.0.0.1",
     "build": "electron-vite build",
     "typecheck": "tsc -p tsconfig.json",
-    "package:linux": "electron-builder --linux AppImage deb rpm --publish never"
+    "package:linux": "electron-builder --linux AppImage deb rpm pacman --publish never"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

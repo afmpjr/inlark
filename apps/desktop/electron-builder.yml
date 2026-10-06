@@ -16,6 +16,7 @@ linux:
     - AppImage
     - deb
     - rpm
+    - pacman
   category: Network
   executableName: inlark
   syncDesktopName: true
@@ -62,3 +63,19 @@ deb:
     ]
 rpm:
   packageName: inlark
+pacman:
+  packageName: inlark
+  depends:
+    [
+      gtk3,
+      alsa-lib,
+      mesa,
+      libdrm,
+      libxkbcommon,
+      libnotify,
+      nss,
+      libxss,
+      libxtst,
+      xdg-utils,
+      libsecret,
+    ]

@@ -1,0 +1,6 @@
+FROM docker.io/node:24-bookworm
+RUN corepack enable && corepack prepare pnpm@12.3.4 --activate
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    python3 make g++ fakeroot dpkg rpm libarchive-tools xz-utils \
+    && rm -rf /var/lib/apt/lists/*
+WORKDIR /repo
